@@ -1,19 +1,19 @@
-#ifndef WIZARD_H
-#define WIZARD_H
+#ifndef WIZARD_H_
+#define WIZARD_H_
 #include "Character.h"
 #include <string>
+#include "Weapon.h"
 using namespace std;
 
-class Wizard : protected Character
+class Wizard : public Character
 {
-private:
-	Character c1;
 public:
 	Wizard();
-	Wizard(Character c);
-	void WizDisplay();
-	void increWizLevel(int x);
+	~Wizard();
+	Wizard(string name);
+	void trainCharacter(int hours);
+	void increLevel();
 };
 
-#endif WIZARD_H
+#endif 
 
